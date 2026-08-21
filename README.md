@@ -1,1 +1,25 @@
-# eslint-config
+# ES-Lint
+
+General Typescript ESLint Rules I use.
+
+To use in your project:
+```
+yarn add git+https://github.com/v1nnsatanic/eslint-config
+```
+
+Then create an `eslint.config.mjs` like (can also be a yaml or js):
+``` js
+import config from 'v1nnsatanic/eslint-config'
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig(
+  [
+    {
+      extends: config,
+	  files: "src/**/*.{ts, tsx}"
+    }
+  ]
+)
+```
+
+You also need to pass "files" to specify the files to be linted
